@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!-- Sama dengan struktur umum --> </header>
+    <main>
+        <h2>Invoice</h2>
+        <p>Nama: <span id="nama"></span></p>
+        <p>Alamat: <span id="alamat"></span></p>
+        <p>Produk: <span id="produk"></span></p>
+        <p>Jumlah: <span id="jumlah"></span></p>
+        <p>Harga: <span id="harga"></span></p>
+        <p>Total: <span id="total"></span></p>
+    </main>
+    <footer> <div class="footer">
+    &copy; 2024 Alpat Akbar | All Rights Reserved</div>
+    </footer>
+
+    <script>
+        // Mendapatkan nilai dari query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const nama = urlParams.get('nama');
+        const alamat = urlParams.get('alamat');
+        const produk = urlParams.get('produk');
+        const harga = parseFloat(urlParams.get('harga'));
+        const jumlah = parseInt(urlParams.get('jumlah'));
+
+        // Menghitung total harga
+        const total = jumlah * harga;
+
+        // Menampilkan nilai pada elemen HTML
+        document.getElementById('nama').textContent = nama;
+        document.getElementById('alamat').textContent = alamat;
+        document.getElementById('produk').textContent = produk;
+        document.getElementById('harga').textContent = 'Rp ' + harga.toLocaleString('id-ID');
+        document.getElementById('jumlah').textContent = jumlah;
+        document.getElementById('total').textContent = 'Rp ' + total.toLocaleString('id-ID');
+
+        // Mencetak halaman secara otomatis
+        window.onload = function() {
+            window.print();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Index</title>
+  <style>
+    /* Gaya CSS untuk memperindah tampilan */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000000;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav ul li a:hover {
+      background-color: #ddd;
+    }
+    
+ 
+    .sidebar{
+      width: 200px;
+      height: 100%;
+      background-color: #f4f4f4;
+      float: left;
+      padding-left: 20px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar li a {
+      display: block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #000;  
+    }
+
+    .sidebar li a:hover {
+      background-color: #555;
+      color: #fff;
+    }  
+
+    .content {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-left: 40px;
+      text-align: center;
+    }
+
+    .footer {
+      background-color: #000000;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      clear: both;
+    }
+
+    .marquee-container {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: marquee 15s linear infinite;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-right: 20px;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>RECTUS.co</h1>
+  </header>
+
+<div class="navbar">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tentangpenjualan.html">About</a></li>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <div class="sidebar">
+    <h3>Kategori</h3>
+    <ul>
+     <li><a href="jeans.html">Jeans</a></li>
+      <li><a href="casual.html">Casual</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1><font color="#ooo8b8b">Selamat datang di Online Store</h1></font>
+    <marquee>Selamat datang di toko kami! Lihat penawaran menarik hari ini!</marquee>
+    <p>Kami menyediakan apparel berkualitas. Silakan pilih Produk yang Anda inginkan!.</p>
+    <marquee behavior="scroll" direction="left">
+    </marquee>
+    <br>
+       <img src="logo.png" style="max-width: 100%; height: auto;">
+    </br>
+  </div>
+
+  <div class="footer">
+    &copy; 2024 Alpat Akbar | All Rights Reserved
+  </div>
+</body>
+
+</html>

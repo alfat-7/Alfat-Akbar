@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Casual</title>
+  <style>
+  
+    /* Gaya CSS untuk memperindah tampilan */
+    /* Tambahan gaya CSS khusus untuk halaman produk/jasa */
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000000;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav ul li a:hover {
+      background-color: #ddd;
+    }
+
+    .sidebar{
+      width: 200px;
+      height: 100%;
+      background-color: #f4f4f4;
+      float: left;
+      padding-left: 20px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar li a {
+      display: block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #000;  
+    }
+
+    .sidebar li a:hover {
+      background-color: #555;
+      color: #fff;
+    }  
+
+   .content {
+      float: left;
+      width: 76%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-left: 40px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      clear: both;
+    }
+
+    .marquee-container {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: marquee 15s linear infinite;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-right: 20px;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+ 
+  .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #f4f4f4;
+      padding: 10px;
+      width: 30%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  
+
+	.form-container {
+      
+      margin: 0 auto;
+    }
+
+    .form-container label,
+    .form-container input {
+      width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+    }
+
+    .form-group {
+  margin-bottom: 20px;
+}
+
+
+    .form-container input[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    .submit-button {
+      margin-top: 30px;
+      margin-bottom: 20px;
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.submit-button:active {
+  background-color: #3e8e41;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>RECTUS.co</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tentangpenjualan.html">About</a></li>
+      </ul>
+  </nav>
+
+  <div class="sidebar">
+    <h3>Kategori</h3>
+    <ul>
+      <li><a href="jeans.html">Jeans</a></li>
+       <li><a href="casual.html">Casual</a></li>
+     </ul>
+  </div>
+
+  <div class="content">
+    <h2>Input Transaksi/Reservasi</h2>
+    <div class="form-container">
+      <div class="form">
+              <form action="invoice.html" method="post" onsubmit="return submitForm(event)">
+              <div class="form-group">
+                  <label for="nama">Nama:</label>
+                  <input type="text" id="nama" name="nama" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="alamat">Alamat:</label>
+                  <input type="text" id="alamat" name="alamat" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="produk">Produk:</label>
+                  <input type="text" id="produk" name="produk" value="" readonly>
+              </div>
+
+              <div class="form-group">
+                  <label for="jumlah">Jumlah:</label>
+                  <input type="number" id="jumlah" name="jumlah" required>
+              </div>
+              <div>
+                <label for="harga">Harga:</label>
+                <input type="text" id="harga" name="harga" value="" readonly>
+              </div>
+
+              <div class="form-group"></div>
+              <label for="produk">Metode Pembayaran</label>
+              <select id="produk" name="produk" required>
+                <option value="">- Pilih Pembayaran -</option>
+                <option value="">Transfer Bank</option>
+                <option value="produk1">E-wallet</option>
+                <option value="produk1">Kartu Kredit</option>
+                <option value="produk1">PayPal</option>
+                <option value="produk1">Direct Debit</option>
+                <option value="produk1">Mobile Banking</option>
+              </select>
+             </div>
+              <button onclick="location.href='invoice.html'" type="submit" class="submit-button">Pesan</button>
+      </form>
+    </div>
+  </div>
+</div>
+  <div class="footer">
+    &copy; 2024 Alpat Akbar | All Rights Reserved
+  </div>
+
+  <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const nama = document.getElementById('nama').value;
+            const alamat = document.getElementById('alamat').value;
+            const produk = document.getElementById('produk').value;
+            const harga = document.getElementById('harga').value;
+            const jumlah = document.getElementById('jumlah').value;
+            
+            const queryString = `?nama=${encodeURIComponent(nama)}&alamat=${encodeURIComponent(alamat)}&produk=${encodeURIComponent(produk)}&harga=${encodeURIComponent(harga)}&jumlah=${encodeURIComponent(jumlah)}`;
+            window.location.href = `invoice.html${queryString}`;
+        }
+
+        // Mengisi nilai produk dan harga berdasarkan query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+        const price = urlParams.get('price');
+        if (product && price) {
+            document.getElementById('produk').value = product;
+            document.getElementById('harga').value = price;
+        }
+    </script>
+</body>
+
+</html>
